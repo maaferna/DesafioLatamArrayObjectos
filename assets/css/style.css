@@ -1,0 +1,31 @@
+body {
+    background-color: #f8f9fa;
+    font-family: 'Arial', sans-serif;
+}
+
+h1 {
+    font-family: 'Lobster', cursive;
+}
+
+.card {
+    border-radius: 15px;
+    background-color: #ffffff;
+}
+
+.btn-success {
+    font-size: 1.25rem;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#traumatologiaTable {
+    display: none;
+}
+
+p {
+    margin: 5px 0;
+}
+
+hr {
+    border-top: 2px solid #007bff;
+}
