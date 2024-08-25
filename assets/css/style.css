@@ -22,6 +22,10 @@ h1 {
     display: none;
 }
 
+#radiologiaTable {
+    display: none;
+}
+
 p {
     margin: 5px 0;
 }

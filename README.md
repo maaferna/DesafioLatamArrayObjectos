@@ -1,62 +1,96 @@
-# Desafío - Cachipún contra la máquina
+# Centro Médico Dental Ñuñoa - Gestión de Consultas Médicas
 
-Este proyecto es una implementación de un juego de "Cachipún" (Piedra, Papel o Tijera) donde el usuario juega contra la máquina. La aplicación permite al usuario seleccionar cuántas veces desea jugar y muestra los resultados de cada ronda inmediatamente después de que se hace la selección.
+Este proyecto es una aplicación web desarrollada para gestionar las consultas médicas de un centro médico. Utiliza tecnologías web como HTML, CSS, JavaScript y Bootstrap para la interfaz de usuario, y se enfoca en la manipulación dinámica de arrays y objetos en JavaScript para cumplir con los requerimientos del centro médico.
 
-## Reglas del Juego
+## Descripción
 
-1. Tijera le gana a papel.
-2. Papel le gana a piedra.
-3. Piedra le gana a tijera.
-4. Si ambos jugadores eligen la misma opción, es un empate.
+La aplicación permite:
+1. **Agregar nuevas consultas** al arreglo de Traumatología.
+2. **Eliminar consultas** del arreglo de Radiología.
+3. **Mostrar las consultas** de distintas especialidades en la página web con un formato estilizado.
+4. **Filtrar y mostrar pacientes** según su previsión de salud (Isapre o Fonasa).
+5. **Imprimir listados completos** de pacientes y consultas.
+6. **Mostrar u ocultar** tablas de consultas médicas con un botón.
 
-## Requisitos
+## Funcionalidades
 
-1. **Número de Rondas**: El usuario debe ingresar cuántas veces desea jugar contra la máquina.
-2. **Selección del Usuario**: El usuario selecciona su jugada (Piedra, Papel o Tijera) para cada ronda.
-3. **Selección Automática**: La máquina genera una jugada automáticamente usando la función `Math.random()` de JavaScript.
-4. **Determinación del Ganador**: Se compara la jugada del usuario con la generada automáticamente por la máquina para determinar el ganador de cada ronda.
-5. **Mostrar Resultados**: Después de cada ronda, se muestra el resultado parcial y, al final de todas las rondas, se declara un ganador global o se indica un empate.
+### 1. Agregar Consultas de Traumatología
+Se agregan nuevas consultas al arreglo de traumatología utilizando métodos de arrays como `push()`. Estas consultas luego se muestran en una tabla Bootstrap dentro del `<div>` con el ID `traumatologia`.
 
-## Instrucciones para Ejecutar el Juego
+### 2. Eliminar Consultas de Radiología
+Se eliminan el primer y último elemento del arreglo de radiología utilizando métodos como `shift()` y `pop()`. Este cambio se refleja dinámicamente en la página.
 
-1. **Clona este repositorio**:
-    ```bash
-    git clone https://github.com/maaferna/DesafioJSCachipun.git
-    ```
+### 3. Mostrar Consultas Médicas
+Las consultas médicas de las diferentes especialidades se muestran en tablas estilizadas con Bootstrap, permitiendo al usuario ver claramente la información. Se utiliza la función `document.write` y `innerHTML` para incluir el contenido dinámico en la página.
 
-2. **Navega al directorio del proyecto**:
-    ```bash
-    cd DesafioJSCachipun
-    ```
+### 4. Filtrar Pacientes por Previsión
+Se filtran y muestran los pacientes según su previsión (Isapre o Fonasa) utilizando métodos como `filter()` y se despliegan en la página.
 
-3. **Abre el archivo `index.html` en tu navegador**:
-    Puedes hacerlo directamente desde tu sistema de archivos o usando la extensión de VS Code "Live Server".
+### 5. Listado Completo de Pacientes
+Se genera un listado completo de todos los pacientes atendidos, y se muestra en un formato claro y ordenado. Los nombres de los pacientes se unen en un solo string utilizando `join()` y se presentan en la interfaz.
+
+### 6. Mostrar/Ocultar Tablas
+Las tablas de consultas médicas pueden ser ocultadas o mostradas según el requerimiento del usuario mediante un botón interactivo. Esto se logra utilizando eventos como `click` en JavaScript y manipulaciones del DOM.
 
 ## Estructura del Proyecto
 
-- `index.html`: El archivo HTML principal que contiene la estructura básica del juego.
-- `assets/css/style.css`: Archivo CSS que contiene los estilos personalizados para la aplicación.
-- `assets/js/script.js`: Archivo JavaScript que contiene la lógica del juego.
+
+- `index.html`: La estructura principal de la página web.
+- `style.css`: Archivo CSS personalizado para estilos adicionales.
+- `script.js`: Archivo JavaScript con la lógica principal para manejar las consultas médicas.
+- `README.md`: Este archivo.
 
 ## Tecnologías Utilizadas
 
-- **HTML5**: Para la estructura del contenido.
-- **CSS3**: Para el diseño y la presentación.
-- **Bootstrap 4.5**: Para el estilo y la responsividad.
-- **JavaScript (ES6)**: Para la lógica del juego.
+- **HTML5**: Estructura del contenido de la web.
+- **CSS3**: Estilos y diseño de la interfaz, incluyendo Bootstrap para componentes responsivos.
+- **JavaScript**: Lógica para manipulación de arrays y objetos, actualización dinámica del DOM.
+- **Bootstrap 4.5**: Framework de CSS para el diseño responsivo y estilizado.
 
-## Contribuciones
+## Requisitos
 
-Si deseas contribuir a este proyecto, por favor realiza un fork del repositorio, realiza tus cambios y envía un pull request. Todas las contribuciones son bienvenidas.
+Para trabajar en este proyecto localmente, necesitas:
+
+- Un navegador web actualizado.
+- Un editor de código como Visual Studio Code.
+- Conexión a internet para cargar los recursos de Bootstrap desde su CDN.
+
+## Instalación
+
+1. Clona el repositorio:
+    ```bash
+    git clone https://github.com/maaferna/DesafioLatamArrayObjectos.git
+    ```
+
+2. Navega a la carpeta del proyecto:
+    ```bash
+    cd DesafioLatamArrayObjectos
+    ```
+
+3. Abre `index.html` en tu navegador o utiliza una extensión de Live Server en tu editor de código.
+
+## Uso
+
+1. **Agregar Consultas**: Las consultas de traumatología se agregan automáticamente cuando la página se carga.
+2. **Eliminar Consultas**: Las consultas de radiología se pueden modificar desde el código.
+3. **Mostrar/Ocultar Tablas**: Usa el botón en la interfaz para mostrar u ocultar las tablas de consultas.
+4. **Filtrar Pacientes**: Los resultados filtrados se muestran automáticamente en la página.
+
+## Contribución
+
+Si deseas contribuir a este proyecto, por favor sigue estos pasos:
+
+1. Realiza un fork del proyecto.
+2. Crea una nueva rama (`git checkout -b feature/nueva-funcionalidad`).
+3. Realiza tus cambios y haz commit (`git commit -m 'Añadir nueva funcionalidad'`).
+4. Sube tu rama (`git push origin feature/nueva-funcionalidad`).
+5. Abre un Pull Request.
 
 ## Licencia
 
-Este proyecto se encuentra bajo la licencia MIT. Consulta el archivo `LICENSE` para obtener más información.
+Este proyecto está bajo la Licencia MIT. Para más detalles, revisa el archivo `LICENSE`.
 
 ## Contacto
 
-Si tienes alguna pregunta o sugerencia, no dudes en contactarme en mi correo electrónico: [maaferna@gmail.com](mailto:maaferna@gmail.com).
+Para consultas o sugerencias, puedes contactar al desarrollador a través del correo: maaferna@gmail.com.
 
----
-
-¡Gracias por jugar y mucho éxito con tu cachipún!
