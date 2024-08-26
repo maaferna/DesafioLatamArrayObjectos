@@ -13,7 +13,7 @@
     <div class="card shadow-lg p-4">
         <h1 class="text-center text-primary">Estadisticas centro medico Ñuñoa</h1>
         
-        <div class="container text-center">
+        <div class="container text-center mb-4">
             <h2>Consultas de Traumatología</h2>
             <button id="toggleTraumatologiaButton" class="btn btn-primary mb-3">Mostrar/Ocultar Traumatología</button>
             <div id="traumatologia">
@@ -21,26 +21,53 @@
             </div>
         </div>
         <hr>
-        <div class="container text-center">
+        <div class="container text-center mb.4">
             <h2>Consultas de Radiología</h2>
             <button id="toggleRadiologiaButton" class="btn btn-primary mb-3">Mostrar/Ocultar Radiología</button>
             <div id="radiologia">
                 <!-- Aquí se mostrará la tabla de radiología -->
             </div>
         </div>
-
-        <h2>Consultas de Dental</h2>
-        <div id="dental"></div>
-
-        <h2>Pacientes Totales</h2>
-        <div id="pacientes-totales"></div>
-
-        <h2>Pacientes ISAPRE en Dental</h2>
-        <div id="pacientes-isapre-dental"></div>
-
-        <h2>Pacientes FONASA en Traumatología</h2>
-        <div id="pacientes-fonasa-trauma"></div>
-    </div>
+        <hr>
+        <div class="container text-center mb-4">
+            <h2>Consultas de Dental</h2>
+            <div id="dental" class="consultas-container">
+                <!-- Aquí se mostrará la tabla de dental, siempre visible -->
+            </div>
+        </div>
+        <hr>
+        <div class="container text-center mb-4">
+            <h1 class="text-center">Listado Total de Pacientes</h1>
+            <div class="row pacientes-container">
+                <div id="pacientesTraumatologia" class="col-md-4 pacientes-column">
+                    <h3>Traumatología</h3>
+                </div>
+                <div id="pacientesRadiologia" class="col-md-4 pacientes-column">
+                    <h3>Radiología</h3>
+                </div>
+                <div id="pacientesDental" class="col-md-4 pacientes-column">
+                    <h3>Dental</h3>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="container text-center mb-4">
+            <h2>Pacientes ISAPRE en Dental</h2>
+            <div id="pacientesISAPRE">
+            </div>
+        </div>
+        <hr>
+        <div class="container text-center mb-4">          
+            <h2>Pacientes FONASA en Traumatología</h2>
+            <div id="pacientesFONASA"></div>
+        </div>
+        <hr>
+        <div class="container text-center">
+            <h2>Resumen de Atenciones por Área</h2>
+            <div id="resumenAtenciones" class="resumen-container">
+                <!-- Aquí se mostrará el resumen de las atenciones -->
+            </div>
+        </div>
     </div>
 </div>
 

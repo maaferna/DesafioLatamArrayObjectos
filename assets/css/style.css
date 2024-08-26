@@ -33,3 +33,34 @@ p {
 hr {
     border-top: 2px solid #007bff;
 }
+
+.consultas-p {
+    text-align: center;
+    margin-right: 20px;
+}
+.consultas-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.pacientes-p {
+    text-align: left;
+    margin-left: 20px;
+}
+.pacientes-container {
+    margin-top: 20px;
+}
+
+.isapre-container {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.resumen-container {
+    margin-top: 20px;
+}
+.resumen-item {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
